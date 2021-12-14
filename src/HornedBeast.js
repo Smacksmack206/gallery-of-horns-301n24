@@ -5,11 +5,14 @@ class HornedBeast extends React.Component {
     return (
       <>
         <h2>{this.props.title}</h2>
-        <img src={this.props.src} alt="" title=""></img>
+        <img src={this.props.src} alt={this.props.imgalt} title={this.props.imgtitle} keyword={this.props.keyword}></img>
         <p>{this.props.description}</p>
       </>
     );
   }
+   
 }
+
+
 
 export default HornedBeast;
