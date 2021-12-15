@@ -174,7 +174,7 @@ class Main extends React.Component {
 
           <Col>
             {allbeast}
-            <h3>{this.state.status}</h3>
+            
 
           </Col>
         </Row>
