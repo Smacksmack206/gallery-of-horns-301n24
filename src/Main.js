@@ -1,11 +1,19 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-
+import Container from 'react-bootstrap/Container';
+import { Col, Row } from "react-bootstrap";
 
 // import Img from '../img/uni.jpeg'
 
 
 class Main extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      fav: 0
+    };
+  }
+  
   render() {
 
     let allbeast = [];
@@ -28,7 +36,7 @@ class Main extends React.Component {
         "image_url": "https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg",
         "title": "Unicorn Head",
         "description": "Someone wearing a creepy unicorn head mask",
-        "keyword": "unicorn", 
+        "keyword": "unicorn",
         "horns": 1
       },
       {
@@ -152,16 +160,21 @@ class Main extends React.Component {
       }
     ];
     json.forEach(element => {
-      let beast = <HornedBeast title={element.title} src={element.image_url} description={element.description} imgtitle={'Unicorn'} imgalt={'Alt coming soon'} keyword={element.keyword} horns={element.horns}/>;
+      let beast = <HornedBeast title={element.title} src={element.image_url} description={element.description} imgtitle={'Unicorn'} imgalt={'Alt coming soon'} keyword={element.keyword} horns={element.horns} />;
       allbeast.push(beast);
     });
 
     return (
-      <>
+      <Container>
+        <Row xs={1} md={2} className="g-4">
+          
+          <Col>
+            {allbeast}
+            <h3>{this.state.status}</h3>
+          </Col>
+        </Row>
 
-        {allbeast}
-
-      </>
+      </Container>
     );
   }
   hornedCall = () => {
