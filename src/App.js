@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Main from './Main';
 import Header from './Header';
 import Footer from './Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
