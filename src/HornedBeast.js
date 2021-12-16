@@ -1,4 +1,12 @@
 import React from 'react';
+// import ReactDOM from 'react-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
+const iconX = <FontAwesomeIcon icon={faHeart} />;
+
+
+
 
 class HornedBeast extends React.Component {
 
@@ -25,7 +33,7 @@ class HornedBeast extends React.Component {
         ></img>
         <p>{this.props.description}</p>
         <p>Horns: {this.props.horns}</p>
-        <h3>{this.state.status}</h3>
+        <h3>{iconX}{this.state.status}</h3>
         {/* <p>Favorites: {this.state.fav}</p> */}
       </>
     );
