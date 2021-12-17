@@ -1,13 +1,9 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
 import Container from 'react-bootstrap/Container';
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-// import Img from '../img/uni.jpeg'
-
 
 class Main extends React.Component {
   constructor(props) {
@@ -169,12 +165,10 @@ class Main extends React.Component {
 
     return (
       <Container>
-        <Row xs={1} md={2} className="g-4">
+        <Row xs={1} md={2} lg={3} xl={4} className="g-4">
 
+          {allbeast}
 
-          <Col>
-            {allbeast}
-          </Col>
         </Row>
 
 
