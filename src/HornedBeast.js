@@ -21,7 +21,9 @@ class HornedBeast extends React.Component {
       this.setState({ status: 1 });
     } else {
       this.setState({ status: this.state.status + 1 });
+
     }
+    this.props.sendBackData(this.props.title);
   }
 
 
