@@ -8,9 +8,11 @@ class SelectedBeast extends React.Component {
     super(props);
     this.state = {
       status: 0,
-      result: 0,
+      selectedBeast: {},
     };
   }
+
+
   render() {
     return (
       <>
@@ -20,10 +22,9 @@ class SelectedBeast extends React.Component {
           </Modal.Header>
           <Modal.Body>
             <Card>
-              <Card.Img src={this.state.result.image_url} alt={'this is an image'} />
+              <Card.Img src={this.props.selectedBeast.image_url} alt={'#'} />
               <Card.Text>
-                Beast description coming soon
-              </Card.Text>
+                {this.props.selectedBeast.description}              </Card.Text>
             </Card>
           </Modal.Body>
           <Modal.Footer>

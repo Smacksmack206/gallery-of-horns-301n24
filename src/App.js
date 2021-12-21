@@ -16,12 +16,8 @@ class App extends React.Component {
     this.state = {
       status: 0,
       show: false,
-      result: 0,
+      selectedBeast: {},
     };
-  }
-
-  showSelectedBeast = () => {
-    this.setState({show: true});
   }
 
   onHide = () => {
@@ -32,9 +28,11 @@ class App extends React.Component {
     // Take in selected beast title as an argument
     // Then use a find method, search over the beast data and find the match
     console.log(title);
-    const result = json.find( (element) => element.title === this.title);
+    const selectedBeast = json.find( (element) => element.title === title);
+    console.log(selectedBeast);
+
     // Save it in state once a match is found
-    this.setState({result, show: true});
+    this.setState({selectedBeast: selectedBeast, show: true});
     // Passed the saved state to selectedbeast componnet
   };
 
@@ -45,7 +43,7 @@ class App extends React.Component {
         <Header />
         <Main json={json} showSelectedBeast={this.props.showSelectedBeast} sendBackData={this.sendBackData}/>
         <Footer />
-        <SelectedBeast show={this.state.show} onHide={this.onHide} result={this.state.result} json={json}/>
+        <SelectedBeast show={this.state.show} onHide={this.onHide} result={this.state.result} selectedBeast={this.state.selectedBeast} />
       </div>
     );
   }
