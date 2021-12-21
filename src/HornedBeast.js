@@ -23,6 +23,7 @@ class HornedBeast extends React.Component {
       this.setState({ status: this.state.status + 1 });
 
     }
+    console.log(this.props.title);
     this.props.sendBackData(this.props.title);
   }
 
@@ -36,7 +37,7 @@ class HornedBeast extends React.Component {
         <p>{this.props.description}</p>
         <p>Horns: {this.props.horns}</p>
         <h3>{iconX}{this.state.status}</h3>
-        {/* <p>Favorites: {this.state.fav}</p> */}
+        
       </>
     );
   }

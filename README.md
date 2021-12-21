@@ -33,3 +33,13 @@ For each of the features listed below, make an estimate of the time it will take
 #### Finish time: 10:41 AM
 
 #### Actual time needed to complete: 37 minutes
+
+## Number and name of feature: #4 Display a Modal
+
+### Estimate of time needed to complete: 1 hour
+
+#### Start time:  8:06 PM
+
+#### Finish time: 9:03 PM
+
+#### Actual time needed to complete: 3 hours
