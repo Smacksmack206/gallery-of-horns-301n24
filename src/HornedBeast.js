@@ -37,7 +37,6 @@ class HornedBeast extends React.Component {
         <p>{this.props.description}</p>
         <p>Horns: {this.props.horns}</p>
         <h3>{iconX}{this.state.status}</h3>
-        
       </>
     );
   }
