@@ -10,6 +10,7 @@ import SelectedBeast from './SelectedBeast';
 
 
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,6 +18,7 @@ class App extends React.Component {
       status: 0,
       show: false,
       selectedBeast: {},
+      updatingbeast: json
     };
   }
 
@@ -36,17 +38,24 @@ class App extends React.Component {
     // Passed the saved state to selectedbeast componnet
   };
 
+  updateBeast = (updatingbeast) => {
+    console.log(updatingbeast);
+    // Save it in state once a match is found
+    this.setState({updatingbeast: updatingbeast});
+  }
   render() {
     return (
       <div className="App">
         <Container />
         <Header />
-        <Main json={json} showSelectedBeast={this.props.showSelectedBeast} sendBackData={this.sendBackData}/>
+        <Main json={this.state.updatingbeast} showSelectedBeast={this.props.showSelectedBeast} sendBackData={this.sendBackData} updateBeast={this.updateBeast} updatingbeast={this.state.updatingbeast}/>
         <Footer />
         <SelectedBeast show={this.state.show} onHide={this.onHide} result={this.state.result} selectedBeast={this.state.selectedBeast} />
+        
       </div>
     );
   }
 }
 
 export default App;
+
