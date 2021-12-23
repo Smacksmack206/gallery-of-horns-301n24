@@ -16,8 +16,6 @@ class Main extends React.Component {
       allbeast: [],
     };
   }
-
-  
   render() {
     console.log(this.props.json);
     const allbeast = [];
@@ -25,22 +23,15 @@ class Main extends React.Component {
       let beast = <Card className="mt-5"> <HornedBeast title={element.title} src={element.image_url} description={element.description} imgtitle={'Unicorn'} imgalt={'Alt coming soon'} keyword={element.keyword} horns={element.horns} sendBackData={this.props.sendBackData} updateBeast={this.props.updateBeast} allbeast={allbeast}/> </Card>;
       allbeast.push(beast);
     });
-
-    
-
     return (
       <Container>
         <FilterBeast allbeast={allbeast} selectedBeast={this.state.selectedBeast} updateBeast={this.props.updateBeast} />
         <Row xs={1} md={2} lg={3} xl={4} className="g-4">
-
           {allbeast}
           {this.state.updatedBeast}
         </Row>
-
         <Modal />
-        
       </Container>
-      
     );
   }
   hornedCall = () => {
